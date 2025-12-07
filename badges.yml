@@ -1,0 +1,45 @@
+# badges.yml
+# Configuration for repository badges, adhering to Apex Technical Authority standards.
+
+badges:
+  - name: "Build Status"
+    description: "Indicates the current build status for the main branch."
+    image_url: "https://github.com/chirag127/DataSphere-CRUD-API-Flask-Web-App/actions/workflows/ci.yml/badge.svg"
+    target_url: "https://github.com/chirag127/DataSphere-CRUD-API-Flask-Web-App/actions/workflows/ci.yml"
+    markdown: "[![Build Status](https://github.com/chirag127/DataSphere-CRUD-API-Flask-Web-App/actions/workflows/ci.yml/badge.svg)](https://github.com/chirag127/DataSphere-CRUD-API-Flask-Web-App/actions/workflows/ci.yml)"
+
+  - name: "Code Coverage"
+    description: "Shows the current test coverage percentage."
+    image_url: "https://codecov.io/gh/chirag127/DataSphere-CRUD-API-Flask-Web-App/branch/main/graph/badge.svg"
+    target_url: "https://codecov.io/gh/chirag127/DataSphere-CRUD-API-Flask-Web-App/tree/main"
+    markdown: "[![Code Coverage](https://codecov.io/gh/chirag127/DataSphere-CRUD-API-Flask-Web-App/branch/main/graph/badge.svg)](https://codecov.io/gh/chirag127/DataSphere-CRUD-API-Flask-Web-App/tree/main)"
+
+  - name: "Python Version"
+    description: "Specifies the required Python version."
+    image_url: "https://img.shields.io/badge/Python-3.10%2B-blue?style=flat-square&logo=python&logoColor=white"
+    target_url: "https://www.python.org"
+    markdown: "[![Python](https://img.shields.io/badge/Python-3.10%2B-blue?style=flat-square&logo=python&logoColor=white)](https://www.python.org)"
+
+  - name: "Framework"
+    description: "Highlights the primary web framework used."
+    image_url: "https://img.shields.io/badge/Framework-Flask-black?style=flat-square&logo=flask&logoColor=white"
+    target_url: "https://flask.palletsprojects.com"
+    markdown: "[![Flask](https://img.shields.io/badge/Framework-Flask-black?style=flat-square&logo=flask&logoColor=white)](https://flask.palletsprojects.com)"
+
+  - name: "Linting & Formatting"
+    description: "Indicates the primary linter and formatter in use."
+    image_url: "https://img.shields.io/badge/Linting-Ruff-black?style=flat-square&logo=ruff&logoColor=white"
+    target_url: "https://beta.ruff.rs/docs/"
+    markdown: "[![Linting](https://img.shields.io/badge/Linting-Ruff-black?style=flat-square&logo=ruff&logoColor=white)](https://beta.ruff.rs/docs/)"
+
+  - name: "License"
+    description: "Details the project's licensing."
+    image_url: "https://img.shields.io/badge/License-CC_BY--NC_4.0-blue?style=flat-square"
+    target_url: "https://creativecommons.org/licenses/by-nc/4.0/"
+    markdown: "[![License](https://img.shields.io/badge/License-CC_BY--NC_4.0-blue?style=flat-square)](https://creativecommons.org/licenses/by-nc/4.0/)"
+
+  - name: "GitHub Stars"
+    description: "Displays the number of GitHub stars."
+    image_url: "https://img.shields.io/github/stars/chirag127/DataSphere-CRUD-API-Flask-Web-App?style=flat-square&color=yellow"
+    target_url: "https://github.com/chirag127/DataSphere-CRUD-API-Flask-Web-App/stargazers"
+    markdown: "[![GitHub Stars](https://img.shields.io/github/stars/chirag127/DataSphere-CRUD-API-Flask-Web-App?style=flat-square&color=yellow)](https://github.com/chirag127/DataSphere-CRUD-API-Flask-Web-App/stargazers)"
