@@ -1,0 +1,54 @@
+name: Python CI
+
+# This workflow will run tests and checks on Python applications. 
+# This workflow is triggered on push events to the main branch and on pull request events.
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        python-version: ["3.9", "3.10", "3.11", "3.12", "3.13"]
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+
+    - name: Set up Python ${{ matrix.python-version }}
+      uses: actions/setup-python@v5
+      with:
+        python-version: ${{ matrix.python-version }}
+        cache: 'uv'
+
+    - name: Install dependencies with uv
+      run: |
+        python -m pip install --upgrade pip
+        pip install uv
+        uv pip install --system --python 3.12 -r requirements.txt
+        uv pip install --system --python 3.12 -r requirements-dev.txt
+
+    - name: Lint with Ruff
+      run: |
+        uv pip install --system --python 3.12 ruff
+        ruff check .
+        ruff format --check .
+
+    - name: Test with Pytest
+      run: |
+        uv pip install --system --python 3.12 pytest
+        pytest
+
+    # Example: Upload coverage report (requires codecov.yml and Codecov token setup)
+    # - name: Upload coverage to Codecov
+    #   uses: codecov/codecov-action@v4
+    #   with:
+    #     token: ${{ secrets.CODECOV_TOKEN }}
+    #     file: ./coverage.xml
+    #     fail_ci_if_error: true
